@@ -15,6 +15,14 @@ const tokenPlugin = req => {
   }
 }
 
+const hostname = window && window.location && window.location.hostname;
+
+console.log("\n***************************\n********** jony ***********\n***************************\n");
+console.log("hostname");
+console.log("\n");
+console.log(hostname);
+console.log("\n***************************\n***************************\n");
+
 const requests = {
   del: url =>
     superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
